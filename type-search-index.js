@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"us.plee19","l":"Cat"},{"p":"us.plee19","l":"Dog"},{"p":"us.plee19","l":"FileInput"},{"p":"us.plee19","l":"FileOutput"},{"p":"us.plee19","l":"Main"},{"p":"us.plee19","l":"Person"},{"p":"us.plee19","l":"Pet"},{"p":"us.plee19","l":"Student"},{"p":"us.plee19","l":"Talkable"}]

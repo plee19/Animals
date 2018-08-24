@@ -1,7 +1,9 @@
 package us.plee19;
 
 /**
- * Created by mgreen14 on 12/27/17.
+ * Creates a Talkable interface, requiring overrides on the talk() and getName() methods for each implementing class.
+ * @author mgreen14
+ * @version 1
  */
 public interface Talkable {
     String talk();

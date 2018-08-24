@@ -6,13 +6,19 @@ import java.io.FileReader;
 import java.io.IOException;
 
 /**
- * Created by mgreen14 on 12/27/17.
+ * Creates class to handle file input methods.
+ * @author mgreen14
+ * @version 1
  */
 public class FileInput {
 
     private BufferedReader in = null;
     private String fileName;
 
+    /**
+     * FileInput constructor creates new instance of FileInput with a given fileName while checking to ensure the file exists.
+     * @param fileName The requested file name for the FileInput instance
+     */
     public FileInput(String fileName) {
         this.fileName = fileName;
         try {
@@ -22,6 +28,9 @@ public class FileInput {
         }
     }
 
+    /**
+     * Prints each line of the file, while catching any file write errors in the process.
+     */
     public void fileRead() {
         String line;
         try {
@@ -33,6 +42,10 @@ public class FileInput {
         }
     }
 
+    /**
+     * Returns each line of the file, while catching any file write errors in the process.
+     * @return String of a single line of the file
+     */
     public String fileReadLine() {
         try {
             String line = in.readLine();
@@ -43,6 +56,9 @@ public class FileInput {
         }
     }
 
+    /**
+     * Closes the file, while catching any IOException errors in the process.
+     */
     public void fileClose() {
         if (in != null) {
             try {
