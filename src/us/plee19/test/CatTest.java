@@ -1,6 +1,7 @@
-package us.plee19;
+package us.plee19.test;
 
 import org.junit.*;
+import us.plee19.Cat;
 
 public class CatTest extends junit.framework.TestCase {
     Cat cat1;

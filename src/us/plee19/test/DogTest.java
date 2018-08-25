@@ -1,6 +1,7 @@
-package us.plee19;
+package us.plee19.test;
 
 import org.junit.*;
+import us.plee19.Dog;
 
 public class DogTest extends junit.framework.TestCase {
     Dog dog1;

@@ -1,6 +1,7 @@
-package us.plee19;
+package us.plee19.test;
 
 import org.junit.*;
+import us.plee19.Student;
 
 public class StudentTest extends junit.framework.TestCase {
     Student student1;
