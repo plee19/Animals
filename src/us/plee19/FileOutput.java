@@ -29,6 +29,7 @@ public class FileOutput {
     /**
      * Writes a given String line to the file, while checking for file write errors in the process.
      * @param line String line to be written to the file
+     * @return void
      */
     public void fileWrite(String line) {
         try {
@@ -41,6 +42,7 @@ public class FileOutput {
 
     /**
      * Closes the file, while catching any IOException errors in the process.
+     * @return void
      */
     public void fileClose() {
         if (out != null) {

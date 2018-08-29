@@ -28,6 +28,7 @@ public class Cat extends Pet implements Talkable {
 
     /**
      * Increments the number of mice killed by the Cat instance.
+     * @return void
      */
     public void addMouse() {
         mousesKilled++;

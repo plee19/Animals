@@ -29,6 +29,7 @@ public class Student extends Person implements Talkable {
     /**
      * Sets the integer age value for the Student instance
      * @param age Integer age value for the Student instance
+     * @return void
      */
     public void setAge(int age) {
         this.age = age;

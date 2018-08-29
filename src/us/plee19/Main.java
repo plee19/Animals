@@ -42,6 +42,7 @@ public class Main {
     /**
      * Prints a line to the console and writes a line to the given output file using the Talkable interface.
      * @param p Talkable interface
+     * @return void
      */
     public static void printOut(Talkable p)  {
         System.out.println(p.getName() + " says=" + p.talk());

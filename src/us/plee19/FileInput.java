@@ -30,6 +30,7 @@ public class FileInput {
 
     /**
      * Prints each line of the file, while catching any file write errors in the process.
+     * @return void
      */
     public void fileRead() {
         String line;
@@ -58,6 +59,7 @@ public class FileInput {
 
     /**
      * Closes the file, while catching any IOException errors in the process.
+     * @return void
      */
     public void fileClose() {
         if (in != null) {

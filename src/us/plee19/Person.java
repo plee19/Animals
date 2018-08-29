@@ -27,6 +27,7 @@ public abstract class Person {
     /**
      * Sets the string name value of the Person instance.
      * @param name String name value of the Person instance
+     * @return void
      */
     public void setName(String name) {
         this.name = name;
