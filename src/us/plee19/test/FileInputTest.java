@@ -1,26 +1,33 @@
 package us.plee19.test;
 
-import static org.junit.Assert.*;
+import org.junit.*;
+import us.plee19.FileInput;
 
-public class FileInputTest {
+public class FileInputTest extends junit.framework.TestCase {
+    FileInput testFile;
+    FileInput emptyTestFile;
 
-    @org.junit.Before
+    @Before
     public void setUp() throws Exception {
+        FileInput testFile = new FileInput("testFile1");
+        FileInput emptyTestFile = new FileInput("testFile2");
     }
 
-    @org.junit.After
+    @After
     public void tearDown() throws Exception {
+
     }
 
-    @org.junit.Test
-    public void fileRead() {
+    @Test
+    public void testFileRead() {
+        //assertEquals("This is a test file.", testFile.fileRead());
     }
 
-    @org.junit.Test
-    public void fileReadLine() {
+    @Test
+    public void testFileReadLine() {
     }
 
-    @org.junit.Test
-    public void fileClose() {
+    @Test
+    public void testFileClose() {
     }
 }

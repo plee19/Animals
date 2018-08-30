@@ -14,12 +14,14 @@ public class StudentTest extends junit.framework.TestCase {
     @Test
     public void testGetAge() {
         assertTrue(student1.getAge() == 23);
+        assertFalse(student1.getAge() == 22);
     }
 
     @Test
     public void testSetAge() {
         student1.setAge(25);
         assertTrue(student1.getAge() == 25);
+        assertFalse(student1.getAge() == 22);
     }
 
     @Test

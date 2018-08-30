@@ -1,22 +1,26 @@
-package us.plee19.test;
+package us.plee19;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class FileOutputTest {
 
-    @org.junit.Before
+    @Before
     public void setUp() throws Exception {
     }
 
-    @org.junit.After
+    @After
     public void tearDown() throws Exception {
     }
 
-    @org.junit.Test
+    @Test
     public void fileWrite() {
     }
 
-    @org.junit.Test
+    @Test
     public void fileClose() {
     }
 }

@@ -5,6 +5,7 @@ import us.plee19.Cat;
 
 public class CatTest extends junit.framework.TestCase {
     Cat cat1;
+    Cat cat2;
 
     @Before
     public void setUp() throws Exception {
@@ -20,6 +21,7 @@ public class CatTest extends junit.framework.TestCase {
     public void testAddMouse() {
         cat1.addMouse();
         assertTrue(cat1.getMousesKilled() == 6);
+        assertFalse(cat1.getMousesKilled() == 5);
         cat1.addMouse();
         assertTrue(cat1.getMousesKilled() == 7);
     }
