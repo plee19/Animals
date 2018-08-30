@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -53,40 +54,82 @@ public class Main {
         outFile.fileWrite(p.getName() + "|" + p.talk());
     }
 
-    public static Cat addCat() throws IOException {
+
+    /**
+     * Requests two user inputs (buffered and scanner) and returns a new instance of a Cat object for use in the add() method.
+     * @return Cat new instance of Cat
+     * @throws InputMismatchException if types do not match required types for new Cat instance
+     * @throws IOException for unspecified IOExceptions
+     */
+    public static Cat addCat() throws InputMismatchException, IOException {
         String name = "";
         int miceKilled = 0;
         BufferedReader keyboard = new BufferedReader(new InputStreamReader(System.in));
         Scanner kScan = new Scanner(System.in);
         System.out.println("Enter the name of a new Cat: ");
-        //try {
+        try {
             name = keyboard.readLine();
-        //} catch () {
-
-        //}
-
+        } catch (InputMismatchException e) {
+            System.out.println("Name must be a string value.");
+        }
         System.out.println("How many mice has " + name + " killed? ");
-        miceKilled = kScan.nextInt();
+        try {
+            miceKilled = kScan.nextInt();
+        } catch (InputMismatchException e) {
+            System.out.println("Number of mice killed must be an integer.");
+        }
         return new Cat(miceKilled, name);
     }
 
-    public static Dog addDog() throws IOException {
+    /**
+     * Requests two user inputs (buffered and scanner) and returns a new instance of a Dog object for use in the add() method.
+     * @return Dog new instance of Dog
+     * @throws InputMismatchException if types do not match required types for new Dog instance
+     * @throws IOException for unspecified IOExceptions
+     */
+    public static Dog addDog() throws InputMismatchException, IOException {
+        String name = "";
+        boolean isFriendly = false;
         BufferedReader keyboard = new BufferedReader(new InputStreamReader(System.in));
         Scanner kScan = new Scanner(System.in);
         System.out.println("Enter the name of a new Dog: ");
-        String name = keyboard.readLine();
+        try {
+            name = keyboard.readLine();
+        } catch (InputMismatchException e) {
+            System.out.println("Name must be a string value.");
+        }
         System.out.println("Is " + name + " friendly? true/false ");
-        boolean isFriendly = kScan.nextBoolean();
+        try {
+            isFriendly = kScan.nextBoolean();
+        } catch (InputMismatchException e) {
+            System.out.println("Friendly must be a boolean value true/false.");
+        }
         return new Dog(isFriendly, name);
     }
 
-    public static Student addStudent() throws IOException {
+    /**
+     * Requests two user inputs (buffered and scanner) and returns a new instance of a Student object for use in the add() method.
+     * @return Student new instance of Student
+     * @throws InputMismatchException if types do not match required types for new Student instance
+     * @throws IOException for unspecified IOExceptions
+     */
+    public static Student addStudent() throws InputMismatchException, IOException {
+        String name = "";
+        int age = 0;
         BufferedReader keyboard = new BufferedReader(new InputStreamReader(System.in));
         Scanner kScan = new Scanner(System.in);
         System.out.println("Enter the name of a new Student: ");
-        String name = keyboard.readLine();
+        try {
+            name = keyboard.readLine();
+        } catch (InputMismatchException e) {
+            System.out.println("Name must be a string value.");
+        }
         System.out.println("How old is " + name + "? ");
-        int age = kScan.nextInt();
+        try {
+            age = kScan.nextInt();
+        } catch (InputMismatchException e) {
+            System.out.println("Age must be an integer.");
+        }
         return new Student(age, name);
     }
 }
