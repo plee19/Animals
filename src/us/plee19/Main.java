@@ -78,7 +78,10 @@ public class Main {
         } catch (InputMismatchException e) {
             System.out.println("Number of mice killed must be an integer.");
         }
-        return new Cat(miceKilled, name);
+        if (name != "" && miceKilled >= 0) {
+            return new Cat(miceKilled, name);
+        }
+        return null;
     }
 
     /**
@@ -89,7 +92,7 @@ public class Main {
      */
     public static Dog addDog() throws InputMismatchException, IOException {
         String name = "";
-        boolean isFriendly = false;
+        Boolean isFriendly = null;
         BufferedReader keyboard = new BufferedReader(new InputStreamReader(System.in));
         Scanner kScan = new Scanner(System.in);
         System.out.println("Enter the name of a new Dog: ");
@@ -104,7 +107,10 @@ public class Main {
         } catch (InputMismatchException e) {
             System.out.println("Friendly must be a boolean value true/false.");
         }
-        return new Dog(isFriendly, name);
+        if (name != "" && isFriendly != null) {
+            return new Dog(isFriendly, name);
+        }
+        return null;
     }
 
     /**
@@ -130,6 +136,9 @@ public class Main {
         } catch (InputMismatchException e) {
             System.out.println("Age must be an integer.");
         }
-        return new Student(age, name);
+        if (name != "" && age != 0) {
+            return new Student(age, name);
+        }
+        return null;
     }
 }
