@@ -44,7 +44,7 @@ public class FileInput {
     }
 
     /**
-     * Returns each line of the file, while catching any file write errors in the process.
+     * Returns the next line of the file, while catching any file write errors in the process.
      * @return String of a single line of the file
      */
     public String fileReadLine() {
