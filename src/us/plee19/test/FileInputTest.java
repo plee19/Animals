@@ -9,13 +9,6 @@ import java.io.IOException;
 
 public class FileInputTest extends junit.framework.TestCase {
     FileInput testFileInput = new FileInput("TestFile1.txt");
-    //FileInput emptyTestFile = new FileInput("EmptyTestFile.txt");
-
-    @Before
-    public void setUp() throws Exception {
-
-    }
-
 
     @Test
     public void testFileRead() {
@@ -25,18 +18,14 @@ public class FileInputTest extends junit.framework.TestCase {
 
     @Test
     public void testFileReadLine() {
-        assertEquals("This is a test file.", testFileInput.fileReadLine());
-        assertEquals("Read these three lines.", testFileInput.fileReadLine());
+       assertEquals("This is a test file.", testFileInput.fileReadLine());
+       assertEquals("Read these three lines.", testFileInput.fileReadLine());
     }
 
-    @Test(expected = IOException.class)
+    // FileNotFoundException already caught within the constructor
+    @Test
     public void testFileClose() {
         testFileInput.fileClose();
         assertNull(testFileInput.fileReadLine());
-    }
-
-    @After
-    public void tearDown() throws Exception {
-
     }
 }
