@@ -3,10 +3,6 @@ package us.plee19.test;
 import org.junit.*;
 import us.plee19.FileInput;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-
 public class FileInputTest extends junit.framework.TestCase {
     FileInput testFileInput = new FileInput("TestFile1.txt");
 
