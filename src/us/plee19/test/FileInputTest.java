@@ -6,6 +6,7 @@ import us.plee19.FileInput;
 public class FileInputTest extends junit.framework.TestCase {
     FileInput testFileInput = new FileInput("TestFile1.txt");
 
+
     @Test
     public void testFileRead() {
         testFileInput.fileRead();
