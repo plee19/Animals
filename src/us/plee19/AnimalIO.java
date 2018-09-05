@@ -11,6 +11,9 @@ import java.util.Scanner;
  * @author plee19
  * @version 1
  */
+
+// Misunderstood activity, need to add to ArrayList and write to file still
+
 public class AnimalIO {
     /**
      * Requests two user inputs (buffered and scanner) and returns a new instance of a Cat object for use in the add() method.
