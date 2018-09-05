@@ -6,6 +6,8 @@ import us.plee19.Student;
 public class StudentTest extends junit.framework.TestCase {
     Student student1;
 
+    // Need unit testing for getName()
+
     @Before
     public void setUp() throws Exception {
         student1 = new Student(23, "Sarah");

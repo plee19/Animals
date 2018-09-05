@@ -7,6 +7,9 @@ public class DogTest extends junit.framework.TestCase {
     Dog dog1;
     Dog dog2;
 
+
+    // Need unit testing for getName()
+
     @Before
     public void setUp() throws Exception {
         dog1 = new Dog(true, "Fido");

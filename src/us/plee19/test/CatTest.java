@@ -7,6 +7,8 @@ public class CatTest extends junit.framework.TestCase {
     Cat cat1;
     Cat cat2;
 
+    // Need unit testing for getName()
+
     @Before
     public void setUp() throws Exception {
         cat1 = new Cat(5, "Sam");
