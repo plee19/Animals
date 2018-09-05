@@ -5,6 +5,8 @@ import us.plee19.Cat;
 import us.plee19.Dog;
 import us.plee19.Student;
 
+// Needs follow-up to make tests better, spoof stream for input
+
 public class AnimalIOTest extends junit.framework.TestCase {
     String name = "Kitty";
     int miceKilled = 10;
@@ -25,6 +27,6 @@ public class AnimalIOTest extends junit.framework.TestCase {
 
     @Test
     public void testAddStudent() throws Exception {
-        assertTrue(new Student(age, name) instanceof Student);
+        assertTrue(new Student(age, name3) instanceof Student);
     }
 }
